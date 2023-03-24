@@ -1,0 +1,296 @@
+/* CUSTOM PROPERTIES */
+:root{
+
+/* ## Colors
+### Primary */
+
+--Blue: hsl(246, 80%, 60%);    /*profile*/
+
+--Light-red1: hsl(15, 100%, 70%);    /*work*/
+--Soft-blue: hsl(195, 74%, 62%);    /*play*/
+--Light-red2: hsl(348, 100%, 68%);   /*study*/
+--Lime-green : hsl(145, 58%, 55%);  /*(exercise)*/
+--Violet : hsl(264, 64%, 52%);      /*(social)*/
+--Soft-orange: hsl(43, 84%, 65%);   /*(self care)*/
+
+/*### Neutral COLORS */
+
+--Very-dark-blue: hsl(226, 43%, 10%);
+--Dark-blue: hsl(235, 46%, 20%);
+--Desaturated-blue: hsl(235, 45%, 61%);
+--Pale-Blue: hsl(236, 100%, 87%);
+
+
+/* UTILITIES */
+--border-radius-sm:1rem;
+
+
+}
+
+/*=============== STYLE GENERALS ===============*/
+html{
+    font-size: 62.5%;
+}
+
+img{
+    max-width: 100%;
+    object-fit: cover;
+
+    vertical-align: top;
+}
+
+ul{
+    list-style: none;
+    padding: 0;
+}
+
+figure{
+  overflow: hidden;
+}
+
+a{color: inherit;}
+
+body{
+    font-family: 'Rubik', sans-serif;
+    background-color: var(--Very-dark-blue);
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*=============== STYLES OF CONTAINERS ===============*/
+
+.container-center{
+    width: 90%;
+    max-width: 125rem;
+    /* GRID STYLES OF CONTAINER*/
+    display: grid;
+    gap: 3rem;
+    grid-template-columns: 1fr 3.5fr;
+}
+
+
+/*=============== HEADER STYLES ===============*/
+
+.header{
+    display: grid;
+    grid-template-rows: 2fr 1fr;
+    border-radius:var(--border-radius-sm) ;
+    background-color: var(--Dark-blue);
+    overflow: hidden;
+}
+
+/* header profile */
+
+.header__profile{
+    padding: 3.5rem 3.5rem 5rem 3.5rem;
+    /* min-height: 40rem; */
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    background-color: var(--Blue);
+    border-bottom-left-radius: var(--border-radius-sm);
+    border-bottom-right-radius: var(--border-radius-sm);
+}
+
+/* style of image */
+.header__figure{
+    width: 10rem;
+    height: 10rem;
+    border: 2px solid white;
+    border-radius: 50%;
+}
+
+/* STYLES OF H1 HEADER */
+
+.header__h1{
+    display: flex;
+    flex-direction: column;
+    font-weight: 400;
+    font-size: 5.6rem;
+}
+
+.header__span{
+    font-size: 1.7rem;
+    color: var(--Pale-Blue);
+}
+
+/* NAV UL STYLES */
+.header__nav{
+    padding: 2.5rem;
+    font-size: 1.7rem;
+    display: flex;
+    align-items: center;
+}
+.header__ul{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* link styles on nav */
+.header__a{
+    text-decoration: none;
+    color: var(--Desaturated-blue);
+    transition: 0.2s ease-in-out;
+}
+
+
+.header__a--selected{
+    color: white;
+}
+
+.header__a:hover{
+    text-decoration: none;
+    color: white;
+}
+
+/*=============== CLOCK STYLES ===============*/
+
+.container-clocks{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+}
+
+/* clock items styles */
+
+.clocks__item{
+    font-size: 1.5rem;
+    padding-top: 5rem;
+    border-radius:var(--border-radius-sm);
+    overflow:hidden;
+}
+
+/* ==CLOCK TEXTS STYLES CONTAINER== */
+.clock__texts{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 2.5rem;
+    background-color: var(--Dark-blue);
+    border-top-left-radius: var(--border-radius-sm);
+    border-top-right-radius: var(--border-radius-sm);
+    transition: 0.2s ease-in-out;
+}
+
+.clock__texts:hover{
+    background-color: var(--Desaturated-blue);
+    cursor: pointer;
+}
+
+.clock__h3{
+    display: flex;
+    justify-content: space-between;
+    font-weight: 300;
+}
+
+.clock__figure{
+    display: flex;
+    align-items: center;
+}
+
+/* hours styles */
+
+.clock__hours{
+    font-size: 4.6rem;
+    font-weight: 300;
+}
+
+/* colors of week clock */
+.clock__week{
+    color: var(--Pale-Blue);
+}
+
+/* changing background colors of items on top and set images */
+.clocks__item--color{
+    background-color:var(--Light-red1);
+    background-image:url(../images/icon-work.svg) ;
+    background-position: 95% -5%;
+    background-repeat: no-repeat;
+   
+}
+
+
+.clocks__item:nth-child(2){
+    background-color:var(--Soft-blue);
+    background-image:url(../images/icon-play.svg) ;
+    background-position: 95% -5%;
+    background-repeat: no-repeat;
+   
+}
+
+.clocks__item:nth-child(3){
+    background-color:var(--Light-red2);
+    background-image:url(../images/icon-study.svg) ;
+    background-position: 95% -5%;
+    background-repeat: no-repeat;
+   
+}
+
+.clocks__item:nth-child(4){
+    background-color:var(--Lime-green);
+    background-image:url(../images/icon-exercise.svg) ;
+    background-position: 95% 1%;
+    background-repeat: no-repeat;
+   
+}
+
+.clocks__item:nth-child(5){
+    background-color:var(--Violet);
+    background-image:url(../images/icon-social.svg) ;
+    background-position: 95% -5%;
+    background-repeat: no-repeat;
+}
+
+.clocks__item:nth-child(6){
+    background-color:var(--Soft-orange);
+    background-image:url(../images/icon-self-care.svg) ;
+    background-position: 95% -5%;
+    background-repeat: no-repeat;
+}
+
+/*=============== MEDIA QUERIES ===============*/
+
+/* 1100px */
+@media screen and (max-width: 1100px){
+    .container-center{
+        grid-template-columns: 1fr 2fr;
+    }
+
+    .container-clocks{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* styles for 724px */
+@media screen and (max-width: 724px){
+ 
+    .container-center{
+        grid-template-columns: 1fr;
+    }
+    header{
+        grid-template-rows: 1fr 1fr;
+    }
+    /* align items on row for mobile design and align-items c for center on vertical */
+    .header__profile{
+        flex-direction: row;
+        align-items:center ;
+        padding: 3.5rem;
+    }
+
+    .container-clocks{
+        grid-template-columns: 1fr;
+    }
+    /* nav bar on row */
+    .header__ul{
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+}
