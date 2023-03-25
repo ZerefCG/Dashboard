@@ -86,7 +86,7 @@ body{
 
 .header__profile{
     padding: 3.5rem 3.5rem 5rem 3.5rem;
-    /* min-height: 40rem; */
+
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
@@ -161,9 +161,10 @@ body{
 .clocks__item{
     font-size: 1.5rem;
     padding-top: 5rem;
-    border-radius:var(--border-radius-sm);
-    overflow:hidden;
+    border-radius:calc(var(--border-radius-sm) + 0.3rem );
 }
+
+/*  */
 
 /* ==CLOCK TEXTS STYLES CONTAINER== */
 .clock__texts{
@@ -174,9 +175,9 @@ body{
     gap: 2rem;
     padding: 2.5rem;
     background-color: var(--Dark-blue);
-    border-top-left-radius: var(--border-radius-sm);
-    border-top-right-radius: var(--border-radius-sm);
+    border-radius:var(--border-radius-sm);
     transition: 0.2s ease-in-out;
+    
 }
 
 .clock__texts:hover{
@@ -208,7 +209,7 @@ body{
 }
 
 /* changing background colors of items on top and set images */
-.clocks__item--color{
+.clocks__item:nth-child(1){
     background-color:var(--Light-red1);
     background-image:url(../images/icon-work.svg) ;
     background-position: 95% -5%;
@@ -226,7 +227,7 @@ body{
 }
 
 .clocks__item:nth-child(3){
-    background-color:var(--Light-red2);
+    background-color: var(--Light-red2);
     background-image:url(../images/icon-study.svg) ;
     background-position: 95% -5%;
     background-repeat: no-repeat;

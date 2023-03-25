@@ -13,6 +13,7 @@
 *,::after,::before{
     margin: 0;
     box-sizing: border-box;
+    padding: 0;
   }
   /* =============== RESET MARGIN AND BOX-SIZING END=============== */
    
